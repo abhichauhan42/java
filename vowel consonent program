@@ -1,0 +1,16 @@
+import java.util.*;
+
+public class vowelconsonent {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the alphabet u want to check:");
+        char a = sc.nextLine().charAt(0);
+
+        if (a == 'a' || a == 'e' || a == 'i' || a == 'o' || a == 'u') {
+            System.out.println("this alphabet is a vowel.");
+        } else {
+            System.out.println("This alphabets is a consonent.");
+        }
+        sc.close();
+    }
+}
