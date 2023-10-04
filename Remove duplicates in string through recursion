@@ -1,0 +1,24 @@
+public class removeduplicates {
+    public static boolean[] map = new boolean[26];
+
+    public static void removedupli(String str, int indx, String newstring) {
+        if (indx == str.length()) {
+            System.out.println(newstring);
+            return;
+        }
+        char currchar = str.charAt(indx);
+        if (map[currchar - 'a']) {
+            removedupli(str, indx + 1, newstring);
+        } else {
+            newstring += currchar;
+            map[currchar - 'a'] = true;
+            removedupli(str, indx + 1, newstring);
+        }
+
+    }
+
+    public static void main(String[] args) {
+        String str = "aabaax";
+        removedupli(str, 0, "");
+    }
+}
