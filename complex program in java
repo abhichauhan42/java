@@ -1,0 +1,34 @@
+public class complexnumber {
+    int real, image;
+
+    public complexnumber(int r, int i) {
+        this.real = r;
+        this.image = i;
+    }
+
+    public void show() {
+        System.out.println("The Complex number is " + this.real + " +i" + this.image);
+
+    }
+
+    public static complexnumber add(complexnumber n1, complexnumber n2) {
+        complexnumber result = new complexnumber(0, 0);
+        result.real = n1.real + n2.real;
+        result.image = n1.image + n2.image;
+        return result;
+    }
+
+    public static void main(String[] args) {
+        complexnumber c1 = new complexnumber(4, 5);
+        complexnumber c2 = new complexnumber(10, 5);
+
+        System.out.println("first complex number:");
+        c1.show();
+        System.out.println("second complex number:");
+        c2.show();
+
+        complexnumber res = add(c1, c2);
+        res.show();
+    }
+
+}
