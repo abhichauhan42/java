@@ -1,0 +1,20 @@
+public class printallsubsequence {
+    public static void subsequences(String str,int indx,String newstring){
+        if (indx==str.length()){
+            System.out.println(newstring);
+            return;
+        }
+        char currchar=str.charAt(indx);
+        //to be
+        subsequences(str, indx+1, newstring+currchar);
+
+        //not to be
+        subsequences(str, indx+1, newstring);
+
+    }
+    public static void main(String[] args){
+        String str = "abc";
+        subsequences(str,0,"");
+
+    }
+}
