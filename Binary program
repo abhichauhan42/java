@@ -1,0 +1,9 @@
+public class binary {
+    public static void main(String[] args) {
+                String x = "101010";
+                String y = "001010";
+                int sum = Integer.parseInt(x, 2) + Integer.parseInt(y, 2);// this will not work because it takes decimal value
+                String result = Integer.toBinaryString(sum);
+                System.out.print(result + "\t");
+            }
+}
