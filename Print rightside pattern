@@ -1,0 +1,20 @@
+import java.util.*;
+
+public class rightsidepattern {
+    public static void main(String[] args) {
+        int a, b, rows;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number of rows");
+        rows = sc.nextInt();
+        for (a = 0; a < rows; a++) {
+            for (b = 2 * (rows - a); b >= 0; b--) {
+                System.out.print(" ");
+            }
+            for (b = 0; b <= a; b++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+
+    }
+}
